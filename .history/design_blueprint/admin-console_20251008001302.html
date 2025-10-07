@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>リソース作成・編集</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b95da",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(11, 149, 218, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(11, 149, 218, 0.2) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-dark bg-grid dark group/design-root">
+<div class="absolute inset-0 bg-gradient-to-br from-background-dark via-transparent to-background-dark"></div>
+<div class="layout-container flex h-full grow flex-col z-10">
+<header class="flex items-center justify-between p-4 md:px-10 border-b border-[#283339]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h1 class="text-white text-2xl font-bold tracking-[-0.033em]">管理画面</h1>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-white hidden sm:block">こんにちは、管理者さん</p>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-[#1a252a] transition-colors">
+<span class="material-symbols-outlined text-white">logout</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-4 md:px-10 py-8 space-y-8">
+<div class="max-w-4xl mx-auto space-y-8">
+<div>
+<a class="flex items-center gap-2 text-[#9cb0ba] hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>管理画面トップに戻る</span>
+</a>
+</div>
+<div class="bg-[#1a252a]/50 backdrop-blur-sm border border-[#283339] rounded-xl shadow-lg p-6 md:p-8">
+<form class="space-y-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">edit_document</span>
+<h2 class="text-white text-3xl font-bold tracking-tight">リソース作成・編集</h2>
+</div>
+<div>
+<label class="block text-sm font-medium text-[#9cb0ba] mb-2" for="title">タイトル</label>
+<input class="form-input flex w-full min-w-0 flex-1 rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#101c22] placeholder:text-[#9cb0ba] px-4 py-3 text-base font-normal" id="title" name="title" placeholder="例: Next.js入門" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[#9cb0ba] mb-2" for="description">説明</label>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#101c22] placeholder:text-[#9cb0ba] px-4 py-3 text-base font-normal" id="description" name="description" placeholder="リソースの簡単な説明を入力してください。" rows="4"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-[#9cb0ba] mb-2">コンテンツのアップロード</label>
+<div class="mt-2 flex justify-center rounded-lg border border-dashed border-[#283339] px-6 py-10 hover:border-primary transition-colors">
+<div class="text-center">
+<span class="material-symbols-outlined text-5xl text-[#9cb0ba]">cloud_upload</span>
+<div class="mt-4 flex text-sm leading-6 text-[#9cb0ba]">
+<label class="relative cursor-pointer rounded-md font-semibold text-primary hover:text-primary/80 focus-within:outline-none focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 focus-within:ring-offset-background-dark" for="file-upload">
+<span>ファイルをアップロード</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">またはドラッグ＆ドロップ</p>
+</div>
+<p class="text-xs leading-5 text-[#9cb0ba]">動画、テキスト、画像ファイル</p>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-[#9cb0ba] mb-2" for="tags">タグ</label>
+<input class="form-input flex w-full min-w-0 flex-1 rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#101c22] placeholder:text-[#9cb0ba] px-4 py-3 text-base font-normal" id="tags" name="tags" placeholder="カンマ区切りで入力 (例: Next.js, React, Web開発)" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-[#9cb0ba] mb-2" for="category">カテゴリ</label>
+<select class="form-select flex w-full min-w-0 flex-1 rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#101c22] placeholder:text-[#9cb0ba] px-4 py-3 text-base font-normal" id="category" name="category">
+<option>フロントエンド</option>
+<option>バックエンド</option>
+<option>インフラ</option>
+<option>その他</option>
+</select>
+</div>
+<div class="border-t border-[#283339] pt-6">
+<div class="flex flex-col sm:flex-row justify-end gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent border border-primary text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors" type="button">
+<span class="truncate">下書き保存</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors" type="submit">
+<span class="truncate">公開する</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</main>
+<footer class="p-4 md:px-10 mt-auto">
+<p class="text-[#9cb0ba] text-sm font-normal leading-normal text-center">© 2024 Learning Resource Site</p>
+</footer>
+</div>
+</div>
+
+</body></html>

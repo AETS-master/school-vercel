@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>学習リソース</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0b95da",
+              "background-light": "#f5f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .bg-grid {
+        background-image:
+          linear-gradient(to right, rgba(11, 149, 218, 0.2) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(11, 149, 218, 0.2) 1px, transparent 1px);
+        background-size: 2rem 2rem;
+      }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-dark bg-grid dark group/design-root">
+<div class="absolute inset-0 bg-gradient-to-br from-background-dark via-transparent to-background-dark"></div>
+<div class="layout-container flex h-full grow flex-col z-10">
+<header class="flex items-center justify-between p-4 md:px-10 border-b border-[#283339]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h1 class="text-white text-2xl font-bold tracking-[-0.033em]">学習リソース</h1>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-white hidden sm:block">こんにちは、ゲストさん</p>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-[#1a252a] transition-colors">
+<span class="material-symbols-outlined text-white">logout</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-4 md:px-10 py-8 space-y-8">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#9cb0ba]">search</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#1a252a] h-12 placeholder:text-[#9cb0ba] pl-12 pr-4 py-3 text-base font-normal" placeholder="リソースを検索..." type="search"/>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative w-full md:w-48">
+<select class="form-select w-full appearance-none rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#1a252a] h-12 placeholder:text-[#9cb0ba] px-4 py-3 text-base font-normal">
+<option value="">カテゴリ</option>
+<option value="programming">プログラミング</option>
+<option value="design">デザイン</option>
+<option value="network">ネットワーク</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#9cb0ba] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="flex flex-col bg-[#1a252a] border border-[#283339] rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+<div class="p-6 space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">code</span>
+<h3 class="text-white text-xl font-bold tracking-[-0.015em]">Next.js入門</h3>
+</div>
+<p class="text-[#9cb0ba] text-sm font-normal leading-relaxed">
+                                最新のReactフレームワークであるNext.jsの基本から応用までを学びます。
+                            </p>
+</div>
+<div class="px-6 py-4 border-t border-[#283339]">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">学習を開始</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1a252a] border border-[#283339] rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+<div class="p-6 space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">security</span>
+<h3 class="text-white text-xl font-bold tracking-[-0.015em]">サイバーセキュリティ基礎</h3>
+</div>
+<p class="text-[#9cb0ba] text-sm font-normal leading-relaxed">
+                                ネットワークの脅威から身を守るための基本的な知識と技術を習得します。
+                            </p>
+</div>
+<div class="px-6 py-4 border-t border-[#283339]">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">学習を開始</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1a252a] border border-[#283339] rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+<div class="p-6 space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">palette</span>
+<h3 class="text-white text-xl font-bold tracking-[-0.015em]">UI/UXデザイン原則</h3>
+</div>
+<p class="text-[#9cb0ba] text-sm font-normal leading-relaxed">
+                                ユーザー中心のインターフェースを設計するための原則と実践方法を学びます。
+                            </p>
+</div>
+<div class="px-6 py-4 border-t border-[#283339]">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">学習を開始</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1a252a] border border-[#283339] rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+<div class="p-6 space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">lan</span>
+<h3 class="text-white text-xl font-bold tracking-[-0.015em]">ネットワーク構築実践</h3>
+</div>
+<p class="text-[#9cb0ba] text-sm font-normal leading-relaxed">
+                                物理的なネットワーク機器の設定から仮想ネットワークまで幅広く学習。
+                            </p>
+</div>
+<div class="px-6 py-4 border-t border-[#283339]">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">学習を開始</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1a252a] border border-[#283339] rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+<div class="p-6 space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">data_object</span>
+<h3 class="text-white text-xl font-bold tracking-[-0.015em]">Pythonデータ分析</h3>
+</div>
+<p class="text-[#9cb0ba] text-sm font-normal leading-relaxed">
+                                PandasやNumPyを使い、実践的なデータ分析スキルを身につけます。
+                            </p>
+</div>
+<div class="px-6 py-4 border-t border-[#283339]">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">学習を開始</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col bg-[#1a252a] border border-[#283339] rounded-xl overflow-hidden shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
+<div class="p-6 space-y-4 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">cloud</span>
+<h3 class="text-white text-xl font-bold tracking-[-0.015em]">AWSクラウド入門</h3>
+</div>
+<p class="text-[#9cb0ba] text-sm font-normal leading-relaxed">
+                                主要なAWSサービスの概要と、基本的なインフラ構築方法を学びます。
+                            </p>
+</div>
+<div class="px-6 py-4 border-t border-[#283339]">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">学習を開始</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 md:px-10 mt-auto">
+<p class="text-[#9cb0ba] text-sm font-normal leading-normal text-center">© 2024 Learning Resource Site</p>
+</footer>
+</div>
+</div>
+
+</body></html>

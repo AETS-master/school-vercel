@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="dark" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>学習リソース詳細</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0b95da",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(11, 149, 218, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(11, 149, 218, 0.2) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-dark bg-grid dark group/design-root">
+<div class="absolute inset-0 bg-gradient-to-br from-background-dark via-transparent to-background-dark"></div>
+<div class="layout-container flex h-full grow flex-col z-10">
+<header class="flex items-center justify-between p-4 md:px-10 border-b border-[#283339]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h1 class="text-white text-2xl font-bold tracking-[-0.033em]">学習リソース</h1>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-white hidden sm:block">こんにちは、ゲストさん</p>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-[#1a252a] transition-colors">
+<span class="material-symbols-outlined text-white">logout</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-4 md:px-10 py-8 space-y-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div>
+<a class="flex items-center gap-2 text-[#9cb0ba] hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>リソース一覧に戻る</span>
+</a>
+</div>
+<div class="bg-[#1a252a]/50 backdrop-blur-sm border border-[#283339] rounded-xl shadow-lg">
+<div class="p-6 md:p-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+<h2 class="text-white text-3xl font-bold tracking-tight">Next.js入門</h2>
+</div>
+<p class="text-[#9cb0ba] text-base font-normal leading-relaxed">
+                                    最新のReactフレームワークであるNext.jsの基本から応用までを学びます。このコースでは、サーバーサイドレンダリング、静的サイト生成、APIルートなど、Next.jsの主要な機能を網羅的に学習します。
+                                </p>
+</div>
+<div class="aspect-video">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="w-full h-full" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/S_8Ab1-p22o?si=s_vU3o3N_n4kZ1hQ" title="YouTube video player"></iframe>
+</div>
+<div class="p-6 md:p-8 space-y-6">
+<h3 class="text-white text-2xl font-bold">学習コンテンツ</h3>
+<div class="prose prose-invert prose-p:text-[#9cb0ba] prose-headings:text-white max-w-none">
+<h4>セクション1: はじめに</h4>
+<p>Next.jsの概要と開発環境の構築方法について説明します。Node.jsとnpmがインストールされていることを確認してください。</p>
+<h4>セクション2: 基本的なルーティング</h4>
+<p>Pages RouterとApp Routerの違いを理解し、基本的なページの作成とナビゲーションを実装します。</p>
+<img alt="Code snippet" class="rounded-lg border border-[#283339]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnRg7cnhltK3LgprCnhbppillFndkmsmkaqwXepxO7JhZ1-c8s9CuPH81dvw5m21dl_kALbZb3IG5VlOioEeoD-ExIHBdYKWM8B7a8CCbMSMmW25W8ptnMnN_0nU-LU42VmHNvER15ny4KJFzcUJQ3Jb2J4nHj0btJzeqPVVwLAVVJpnULkRs5sTo5_ka00oF_78VbAOgzg_HBRfGibrpnNIiLZFGvMi105TuJlEITSwyxXYClPAnQr8IRwTpXNolr47R-t4Uci6GK"/>
+<h4>セクション3: データフェッチ</h4>
+<p>getStaticProps, getServerSideProps, そして新しいApp Routerでのデータフェッチ方法について学びます。</p>
+</div>
+</div>
+</div>
+<div class="bg-[#1a252a]/50 backdrop-blur-sm border border-[#283339] rounded-xl shadow-lg p-6 md:p-8 space-y-6">
+<h3 class="text-white text-2xl font-bold">コメント</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">person</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="text-white font-bold">Taro Yamada</p>
+<p class="text-[#9cb0ba] text-sm">2日前</p>
+</div>
+<p class="text-[#9cb0ba] mt-1">非常に分かりやすい解説でした！特にデータフェッチの部分が参考になりました。</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/70 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">person</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<p class="text-white font-bold">Hanako Tanaka</p>
+<p class="text-[#9cb0ba] text-sm">5日前</p>
+</div>
+<p class="text-[#9cb0ba] mt-1">App Routerの解説がもっと欲しいです。</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#283339] bg-[#101c22] placeholder:text-[#9cb0ba] px-4 py-3 text-base font-normal" placeholder="コメントを追加..." rows="4"></textarea>
+<div class="mt-4 flex justify-end">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transition-colors">
+<span class="truncate">投稿する</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 space-y-8">
+<div class="bg-[#1a252a]/50 backdrop-blur-sm border border-[#283339] rounded-xl shadow-lg p-6 space-y-6 sticky top-8">
+<div>
+<h3 class="text-white text-xl font-bold mb-4">評価</h3>
+<div class="flex items-center justify-center gap-2">
+<button class="text-yellow-400 text-4xl hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size: inherit;">star</span></button>
+<button class="text-yellow-400 text-4xl hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size: inherit;">star</span></button>
+<button class="text-yellow-400 text-4xl hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size: inherit;">star</span></button>
+<button class="text-yellow-400 text-4xl hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size: inherit;">star</span></button>
+<button class="text-[#4b5563] text-4xl hover:scale-110 transition-transform"><span class="material-symbols-outlined" style="font-size: inherit;">star</span></button>
+</div>
+<p class="text-center text-[#9cb0ba] mt-2 text-sm">(平均評価: 4.2 / 120件の評価)</p>
+</div>
+<div class="border-t border-[#283339]"></div>
+<div>
+<h3 class="text-white text-xl font-bold mb-4">関連資料</h3>
+<ul class="space-y-3">
+<li>
+<a class="flex items-center gap-3 text-[#9cb0ba] hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-primary group-hover:animate-pulse">link</span>
+<span class="underline decoration-primary/50 underline-offset-4">Next.js 公式ドキュメント</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-[#9cb0ba] hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-primary group-hover:animate-pulse">link</span>
+<span class="underline decoration-primary/50 underline-offset-4">React 公式サイト</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-[#9cb0ba] hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-primary group-hover:animate-pulse">description</span>
+<span class="underline decoration-primary/50 underline-offset-4">サンプルコード (GitHub)</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-4 md:px-10 mt-auto">
+<p class="text-[#9cb0ba] text-sm font-normal leading-normal text-center">© 2024 Learning Resource Site</p>
+</footer>
+</div>
+</div>
+
+</body></html>
