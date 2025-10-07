@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "STUDENT_PASSWORD": "@student_password",
+    "ADMIN_PASSWORD": "@admin_password",
+    "NEXTAUTH_SECRET": "@nextauth_secret"
+  }
+}
