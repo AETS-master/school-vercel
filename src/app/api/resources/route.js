@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-import { verifyToken } from '../../../lib/auth';
-import sql from '../../../lib/db';
+import { verifyToken } from '@/lib/auth';
+import sql from '@/lib/db';
 
 export async function GET(request) {
   try {

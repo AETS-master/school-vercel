@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { checkStudentPassword, checkAdminPassword, generateToken } from '../../../lib/auth';
+import { checkStudentPassword, checkAdminPassword, generateToken } from '@/lib/auth';
 
 export async function POST(request) {
   try {
