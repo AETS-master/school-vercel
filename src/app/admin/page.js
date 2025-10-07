@@ -133,16 +133,16 @@ export default function AdminDashboard() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={openAddModal}
-                className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition duration-200 flex items-center"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition duration-200 shadow-sm"
               >
-                <span className="material-symbols-outlined text-sm mr-1">add</span>
+                <span className="material-symbols-outlined text-sm mr-2">add</span>
                 リソース追加
               </button>
               <button
                 onClick={handleLogout}
-                className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition duration-200"
+                className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition duration-200"
               >
-                <span className="material-symbols-outlined text-sm mr-1">logout</span>
+                <span className="material-symbols-outlined text-sm mr-2">logout</span>
                 ログアウト
               </button>
             </div>
@@ -285,13 +285,13 @@ export default function AdminDashboard() {
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="px-4 py-2 text-gray-300 hover:text-white transition duration-200"
+                  className="px-4 py-2 text-gray-300 hover:text-white font-medium transition duration-200"
                 >
                   キャンセル
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-primary hover:bg-blue-600 text-white rounded-lg transition duration-200"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-200"
                 >
                   {editingResource ? '更新' : '追加'}
                 </button>

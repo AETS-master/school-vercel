@@ -68,9 +68,9 @@ export default function ResourcesPage() {
             </div>
             <button
               onClick={handleLogout}
-              className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition duration-200"
+              className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition duration-200"
             >
-              <span className="material-symbols-outlined text-sm mr-1">logout</span>
+              <span className="material-symbols-outlined text-sm mr-2">logout</span>
               ログアウト
             </button>
           </div>
@@ -118,9 +118,9 @@ export default function ResourcesPage() {
                     href={resource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1.5 bg-primary hover:bg-blue-600 text-white text-sm rounded-lg transition duration-200"
+                    className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition duration-200 shadow-sm"
                   >
-                    <span className="material-symbols-outlined text-sm mr-1">open_in_new</span>
+                    <span className="material-symbols-outlined text-sm mr-2">open_in_new</span>
                     開く
                   </a>
                 </div>
